@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeIntersectionObserver();
     adjustOrbsForMobile();
     updateHeroPaddingAndScrollMargin();
+    initializeSectionStarfield('starfield-hero', 50);
+    initializeSectionStarfield('starfield-cursos', 30);
 });
 
-// Criação do campo de estrelas
+// Criação do campo de estrelas (apenas para Hero)
 function initializeStarfield() {
-    const starfield = document.getElementById('starfield');
+    const starfield = document.getElementById('starfield-hero');
     starfield.innerHTML = '';
     let starCount = STAR_COUNT;
     if (window.innerWidth <= 480) {
@@ -24,20 +26,13 @@ function initializeStarfield() {
     for (let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
         star.className = 'star';
-        
-        // Posição aleatória
         star.style.left = Math.random() * 100 + '%';
         star.style.top = Math.random() * 100 + '%';
-        
-        // Tamanho aleatório
         const size = Math.random() * (STAR_MAX_SIZE - STAR_MIN_SIZE) + STAR_MIN_SIZE;
         star.style.width = size + 'px';
         star.style.height = size + 'px';
-        
-        // Delay aleatório para animação
         star.style.animationDelay = Math.random() * 3 + 's';
         star.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        
         starfield.appendChild(star);
     }
 }
@@ -465,6 +460,8 @@ window.addEventListener('resize', function() {
     initializeStarfield();
     adjustOrbsForMobile();
     updateHeroPaddingAndScrollMargin();
+    initializeSectionStarfield('starfield-hero', 50);
+    initializeSectionStarfield('starfield-cursos', 30);
 });
 
 // Ajuste dinâmico de padding-top do Hero e scroll-margin-top das seções no mobile
@@ -490,5 +487,24 @@ function updateHeroPaddingAndScrollMargin() {
         sections.forEach(section => {
             section.style.scrollMarginTop = '';
         });
+    }
+}
+
+// Starfield para Hero e Cursos
+function initializeSectionStarfield(starfieldId, count) {
+    const starfield = document.getElementById(starfieldId);
+    if (!starfield) return;
+    starfield.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        const size = Math.random() * (STAR_MAX_SIZE - STAR_MIN_SIZE) + STAR_MIN_SIZE;
+        star.style.width = size + 'px';
+        star.style.height = size + 'px';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        starfield.appendChild(star);
     }
 } 
