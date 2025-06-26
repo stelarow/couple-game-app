@@ -9,13 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     initializeAnimations();
     initializeIntersectionObserver();
+    adjustOrbsForMobile();
 });
 
 // Criação do campo de estrelas
 function initializeStarfield() {
     const starfield = document.getElementById('starfield');
-    
-    for (let i = 0; i < STAR_COUNT; i++) {
+    starfield.innerHTML = '';
+    let starCount = STAR_COUNT;
+    if (window.innerWidth <= 480) {
+        starCount = 25;
+    }
+    for (let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
         star.className = 'star';
         
@@ -405,4 +410,56 @@ function showPreloader() {
 // Mostrar preloader apenas se a página demorar para carregar
 if (document.readyState === 'loading') {
     showPreloader();
-} 
+}
+
+// Mobile Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    // Fechar menu ao clicar em um link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', false);
+            mobileMenu.setAttribute('aria-hidden', true);
+            document.body.style.overflow = '';
+        });
+    });
+}
+
+// Ajustar orbs para mobile
+function adjustOrbsForMobile() {
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
+    if (window.innerWidth <= 480) {
+        if (orb1) {
+            orb1.style.left = '-40px';
+            orb1.style.top = '10%';
+        }
+        if (orb2) {
+            orb2.style.right = '-40px';
+            orb2.style.bottom = '10%';
+        }
+    } else {
+        if (orb1) {
+            orb1.style.left = '10%';
+            orb1.style.top = '20%';
+        }
+        if (orb2) {
+            orb2.style.right = '10%';
+            orb2.style.bottom = '20%';
+        }
+    }
+}
+
+window.addEventListener('resize', function() {
+    initializeStarfield();
+    adjustOrbsForMobile();
+}); 
