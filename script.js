@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
     initializeIntersectionObserver();
     adjustOrbsForMobile();
+    updateHeroPaddingAndScrollMargin();
 });
 
 // Criação do campo de estrelas
@@ -422,6 +423,7 @@ if (hamburger && mobileMenu) {
         hamburger.setAttribute('aria-expanded', isOpen);
         mobileMenu.setAttribute('aria-hidden', !isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
+        setTimeout(updateHeroPaddingAndScrollMargin, 350); // após animação do menu
     });
     // Fechar menu ao clicar em um link
     mobileMenu.querySelectorAll('a').forEach(link => {
@@ -462,4 +464,31 @@ function adjustOrbsForMobile() {
 window.addEventListener('resize', function() {
     initializeStarfield();
     adjustOrbsForMobile();
-}); 
+    updateHeroPaddingAndScrollMargin();
+});
+
+// Ajuste dinâmico de padding-top do Hero e scroll-margin-top das seções no mobile
+function updateHeroPaddingAndScrollMargin() {
+    if (window.innerWidth <= 480) {
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.hero');
+        if (header && hero) {
+            const headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--header-h', headerHeight + 'px');
+            hero.style.paddingTop = `calc(${headerHeight}px + 16px)`;
+        }
+        // Ajustar scroll-margin-top para todas as seções âncora
+        const sections = document.querySelectorAll('section[id]');
+        sections.forEach(section => {
+            section.style.scrollMarginTop = `calc(var(--header-h, 0px) + 16px)`;
+        });
+    } else {
+        // Remover padding extra no desktop
+        const hero = document.querySelector('.hero');
+        if (hero) hero.style.paddingTop = '';
+        const sections = document.querySelectorAll('section[id]');
+        sections.forEach(section => {
+            section.style.scrollMarginTop = '';
+        });
+    }
+} 
