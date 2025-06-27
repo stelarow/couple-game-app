@@ -1109,9 +1109,21 @@ i.curso-icon {
 svg.curso-icon {
     width: 32px;
     height: 32px;
+    fill: none;
+}
+
+/* Estilização para Ícones Duotone */
+.curso-icon .duotone-main {
+    fill: #00c4ff; /* Tom mais claro do gradiente */
+}
+.curso-icon .duotone-secondary {
+    fill: #d400ff; /* Tom mais escuro do gradiente */
+}
+
+/* Mantém a estilização para ícones de linha, se houver */
+svg.curso-icon:not(:has(.duotone-main)) {
     stroke: url(#icon-gradient);
     stroke-width: 1.5;
-    fill: none;
 }
 
 .curso-content {
@@ -1729,4 +1741,13 @@ svg.curso-icon {
 @keyframes pulse-bi {
     0% { border-image: linear-gradient(90deg, #fff700, #39ff14) 1; }
     100% { border-image: linear-gradient(270deg, #39ff14, #fff700) 1; }
+}
+
+.curso-card:hover .curso-icon,
+.curso-card:focus .curso-icon {
+    transform: scale(1.1);
+}
+
+.curso-icon path {
+    fill: #fff;
 } 
