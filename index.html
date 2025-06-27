@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%); z-index: 9999;">
+        <i data-lucide="home" class="test-icon"></i>
+    </div>
+
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: #d400ff;"/>
+                <stop offset="100%" style="stop-color: #00c4ff;"/>
+            </linearGradient>
+        </defs>
+    </svg>
     <!-- Header Fixo -->
     <header class="header" id="header">
         <div class="header-container">
@@ -142,7 +154,7 @@
             <div class="cursos-grid">
                 <button class="curso-card curso-3d" tabindex="0" aria-label="Curso Projetista 3D">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">🧑‍💻</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Projetista 3D</span>
                             <span class="curso-desc">SketchUp, AutoCAD 2D/3D, Enscape, Layout, BIM…</span>
@@ -151,7 +163,7 @@
                 </button>
                 <button class="curso-card curso-informatica" tabindex="0" aria-label="Curso Informática">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">💻</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="6" y1="8" x2="6.01" y2="8"></line><line x1="10" y1="8" x2="10.01" y2="8"></line><line x1="14" y1="8" x2="14.01" y2="8"></line><line x1="18" y1="8" x2="18.01" y2="8"></line><line x1="6" y1="12" x2="6.01" y2="12"></line><line x1="10" y1="12" x2="10.01" y2="12"></line><line x1="14" y1="12" x2="14.01" y2="12"></line><line x1="18" y1="12" x2="18.01" y2="12"></line><line x1="6" y1="16" x2="18" y2="16"></line></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Informática</span>
                             <span class="curso-desc">Windows, Word, Excel (fundamental → avançado), PowerPoint, Nuvem, IA…</span>
@@ -160,7 +172,7 @@
                 </button>
                 <button class="curso-card curso-design" tabindex="0" aria-label="Curso Design Gráfico">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">🎨</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><path d="M15.5 2H8.6c-.4 0-.8.2-1.1.5-.3.3-.5.7-.5 1.1v12.8c0 .4.2.8.5 1.1.3.3.7.5 1.1.5h9.8c.4 0 .8-.2 1.1-.5.3-.3.5-.7.5-1.1V6.5L15.5 2z"></path><path d="M3 7.6v12.8c0 .4.2.8.5 1.1.3.3.7.5 1.1.5h9.8"></path><path d="M15 2v5h5"></path></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Design Gráfico</span>
                             <span class="curso-desc">Photoshop, Illustrator, InDesign, Canva, Social Media…</span>
@@ -169,7 +181,7 @@
                 </button>
                 <button class="curso-card curso-programacao" tabindex="0" aria-label="Curso Programação">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">👨‍💻</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Programação</span>
                             <span class="curso-desc">Lógica, Python, Java, PHP, Android Studio, Jogos, Algoritmos…</span>
@@ -178,7 +190,7 @@
                 </button>
                 <button class="curso-card curso-marketing" tabindex="0" aria-label="Curso Marketing Digital">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">📈</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Marketing Digital</span>
                             <span class="curso-desc">Social Ads, SEO, Copywriting, Canva, Branding, Analytics…</span>
@@ -187,7 +199,7 @@
                 </button>
                 <button class="curso-card curso-ia" tabindex="0" aria-label="Curso Inteligência Artificial">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">🤖</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><path d="M12 8V4H8"></path><path d="M16 4h-4"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M18 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 20c-2.2 0-4-1.8-4-4v-4h8v4c0 2.2-1.8 4-4 4Z"></path><path d="M12 4V2"></path></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Inteligência Artificial</span>
                             <span class="curso-desc">Machine Learning, Prompt Engineering, ChatGPT, Visão Computacional…</span>
@@ -196,7 +208,7 @@
                 </button>
                 <button class="curso-card curso-bi" tabindex="0" aria-label="Curso Business Intelligence">
                     <div class="curso-card-inner">
-                        <span class="curso-icon" aria-hidden="true">📊</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="curso-icon"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
                         <div class="curso-content">
                             <span class="curso-nome">Business Intelligence</span>
                             <span class="curso-desc">Master Excel, Power BI, Dashboards, Storytelling de dados…</span>
