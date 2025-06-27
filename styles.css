@@ -1054,7 +1054,7 @@ body {
 .cursos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 120px;
+    grid-auto-rows: 140px;
     gap: 2.25rem;
     justify-items: center;
     position: relative;
@@ -1062,31 +1062,44 @@ body {
 }
 .curso-card {
     width: 320px;
-    height: 100px;
-    background: radial-gradient(ellipse at 60% 40%, #181a2a 0%, #0a0a0a 100%);
-    border-radius: 24px;
-    border: 3px solid;
-    border-image: linear-gradient(90deg, rgba(212,0,255,0.6), rgba(0,196,255,0.6)) 1;
+    height: 120px;
+    padding: 3px;
+    background: linear-gradient(90deg, rgba(212,0,255,0.6), rgba(0,196,255,0.6));
     box-shadow: 0 4px 32px 0 #000a;
-    backdrop-filter: blur(10px);
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+
+.curso-card-inner {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 60% 40%, #181a2a 0%, #0a0a0a 100%);
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
     display: flex;
     align-items: center;
     gap: 24px;
     padding: 0 32px;
-    transition: transform 0.25s, box-shadow 0.25s, border-image 1.2s;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-    overflow: hidden;
 }
+
 .curso-card:focus {
     box-shadow: 0 0 0 2px #d400ff, 0 0 25px 0 #d400ff88, 0 4px 32px 0 #000a;
-    border-color: #d400ff;
 }
+
 .curso-card:hover, .curso-card:active {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 0 25px 0 #00c4ff88, 0 4px 32px 0 #000a;
-    border-image: linear-gradient(270deg, rgba(0,196,255,0.6), rgba(212,0,255,0.6)) 1;
+}
+
+.curso-card:hover .curso-card-inner {
+    background: radial-gradient(ellipse at 60% 40%, #1a1c2e 0%, #0a0a0a 100%);
+}
+
+.curso-card > * {
+    position: static;
+    z-index: auto;
 }
 .curso-icon {
     font-size: 24px;
@@ -1095,6 +1108,14 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-right: 8px;
+    flex-shrink: 0;
+}
+.curso-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
 }
 .curso-nome {
     font-family: 'Montserrat', sans-serif;
@@ -1103,16 +1124,23 @@ body {
     color: #fff;
     letter-spacing: 0.2px;
     text-align: left;
+    line-height: 1.2;
 }
-.curso-card .curso-desc {
+.curso-desc {
     color: #cccccc;
-    font-size: 15px;
-    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 @media (max-width: 1023px) {
     .cursos-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 120px;
+        grid-auto-rows: 140px;
         gap: 1.8rem;
     }
 }
@@ -1123,7 +1151,7 @@ body {
     }
     .cursos-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 120px;
+        grid-auto-rows: 140px;
         gap: 21px;
     }
     .curso-card {
@@ -1131,6 +1159,11 @@ body {
         min-width: 0;
         max-width: 100%;
         padding: 0 20px;
+        height: 120px;
+    }
+    .curso-desc {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
     }
 }
 
