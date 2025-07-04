@@ -1,170 +1,70 @@
-# 💕 App do Casal - Couple Game App
+# Expo Local-first Template  [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40expostarter)](https://twitter.com/expostarter)
 
-Um aplicativo mobile desenvolvido com React Native/Expo para gamificar relacionamentos românticos! 
+[![Open in Bolt.new](https://www.expostarter.com/images/open-in-bolt.svg)](https://bolt.new/~/github.com/expo-starter/expo-local-first-template)
 
-## 🎯 Funcionalidades Principais
+<p align="center">
+  <a href="https://expostarter.com/"><img src="assets/github-banner.png?raw=true" alt="Expo Starter Kit"></a>
+</p>
 
-### 🏠 Tela Inicial (Home)
-- **Fotos Personalizáveis**: Espaços para adicionar fotos do casal
-- **Informações do Relacionamento**: Nomes, tempo juntos e objetivos
-- **Interface Animada**: Coração pulsante e animações suaves
-- **Tema Romântico**: Design com gradientes e cores aconchegantes
+The `Expo Local-First Template` is a free project model with up-to-date frameworks and configurations for your new local-first Expo project.
 
-### 🎬 Sorteio de Filmes
-- **Sistema de Sorteio**: Algoritmo para escolher filmes aleatoriamente
-- **Cadastro de Filmes**: Adicione título, gênero, duração e nota
-- **Lista Organizada**: Visualize todos os filmes cadastrados
-- **Animações Interativas**: Ícone rotativo durante o sorteio
-- **Gerenciamento**: Adicione e remova filmes facilmente
+If you're searching for a more production-ready template, consider purchasing the [Expo Starter Kit](https://expostarter.com). Your support will help us maintaining our free templates as well.
 
-### 🎯 Roleta de Atividades
-- **Roleta Animada**: Roleta visual com segmentos coloridos
-- **Cadastro de Atividades**: Nome, categoria e nível de dificuldade
-- **Sistema de Categorias**: Organize atividades por tipo
-- **Níveis de Dificuldade**: Fácil, Médio e Difícil com cores distintas
-- **Física Realista**: Animação de rotação com easing natural
+For local-first example with remote sync please check our [article](https://www.expostarter.com/blog/expo-libsql-improve-app-performance)
 
-## 🛠️ Tecnologias Utilizadas
+## 📚 What's inside
 
-- **React Native** - Framework principal
-- **Expo** - Plataforma de desenvolvimento
-- **TypeScript** - Tipagem estática
-- **React Navigation** - Navegação entre telas
-- **React Native Reanimated** - Animações avançadas
-- **React Native SVG** - Gráficos vetoriais para a roleta
-- **AsyncStorage** - Persistência local de dados
-- **Expo Linear Gradient** - Gradientes visuais
-- **React Native Animatable** - Animações simples
-- **Expo Image Picker** - Seleção de fotos
-- **Expo Vector Icons** - Ícones do app
+- ⚡ [Expo v53](https://expo.dev) - Built with Expo for cross-platform support
+- ⚛️ [React Native v0.79.2](https://reactnative.dev) for building native apps using React
+- 💽 Local-first based on [Expo SQLite for](https://docs.expo.dev/versions/latest/sdk/sqlite/) for native and [Sqlite.js](https://github.com/sql-js/sql.js) for Web
+- 💽 Full integrated with [DrizzleORM](https://drizzle.dev) including live query
+- 💎 Integrate with [NativeWind v4](https://www.nativewind.dev), Tailwind CSS for React Native
+- 📦 [zustand](docs.pmnd.rs/zustand)
+- 🎨 Common components from the [rn-reusables](https://github.com/mrzachnugent/react-native-reusables)
+- 🌗 Dark and light mode - Android Navigation Bar matches mode and Persistant mode
+- 📏 Linter and Code Formatter with [biome](https://biomejs.dev/)
+- 🗂 VSCode recommended extensions, settings, and snippets to enhance the developer experience.
 
-## 📱 Estrutura do Projeto
 
-```
-CoupleGameApp/
-├── src/
-│   ├── components/
-│   │   └── AnimatedWheel.tsx    # Componente da roleta animada
-│   ├── screens/
-│   │   ├── HomeScreen.tsx       # Tela inicial com fotos
-│   │   ├── MoviePickerScreen.tsx # Tela de sorteio de filmes
-│   │   └── ActivityWheelScreen.tsx # Tela da roleta
-│   ├── types/
-│   │   └── index.ts             # Definições TypeScript
-│   ├── utils/
-│   │   └── storage.ts           # Funções de armazenamento
-│   └── data/
-├── App.tsx                      # Configuração principal e navegação
-└── package.json                 # Dependências do projeto
+
+### Requirements
+
+- Node.js 20+ and pnpm or bun
+- [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Android Studio Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- For Windows users: [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) is required
+
+
+### Getting started
+
+Run the following command on your local environment:
+
+```shell
+bunx create-expo-app --template https://github.com/expo-starter/expo-local-first-template
 ```
 
-## 🚀 Como Executar
+Then, you can run locally in development mode with live reload:
 
-### Pré-requisitos
-- Node.js (versão 18 ou superior)
-- npm ou yarn
-- Expo CLI (`npm install -g @expo/cli`)
-- Dispositivo móvel com Expo Go ou emulador
+```shell
+bun run dev:ios
+# Or
+bun run dev:android
+```
 
-### Passos para execução
+<p align="center">
+  <a href="https://expostarter.dev/"><img src="assets/preview-banner.png?raw=true" alt="React Native Expo Starter Kit"></a>
+</p>
 
-1. **Clone o repositório**
-   ```bash
-   git clone <seu-repositorio>
-   cd CoupleGameApp
-   ```
+This will open the app in the iOS simulator or Android emulator.
 
-2. **Instale as dependências**
-   ```bash
-   npm install
-   ```
+### Contributions
 
-3. **Execute o projeto**
-   ```bash
-   npm start
-   # ou
-   expo start
-   ```
+Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug. Totally open to any suggestions and improvements.
 
-4. **Abra no dispositivo**
-   - Use o Expo Go para escanear o QR code
-   - Ou execute em emulador com `npm run android` ou `npm run ios`
+### License
 
-## 🎮 Como Usar
-
-### Configuração Inicial
-1. **Configure o Casal**: Na tela inicial, toque no ícone de configurações para adicionar nomes
-2. **Adicione Fotos**: Toque nos espaços de foto para selecionar imagens da galeria
-3. **Dados Salvos**: Todas as informações são salvas automaticamente
-
-### Sorteio de Filmes
-1. **Adicione Filmes**: Toque no botão "+" para cadastrar filmes
-2. **Sorteie**: Toque em "Sortear Filme" para uma escolha aleatória
-3. **Gerencie**: Visualize e remova filmes da lista
-
-### Roleta de Atividades  
-1. **Cadastre Atividades**: Use o botão "+" para adicionar novas atividades
-2. **Gire a Roleta**: Toque em "Girar Roleta!" para começar a animação
-3. **Aguarde o Resultado**: A roleta girará e escolherá uma atividade
-
-## 📦 Dados Padrão
-
-O app vem com dados de exemplo pré-cadastrados:
-
-**Filmes Padrão:**
-- A Origem (Ficção Científica)
-- La La Land (Romance)
-- Parasita (Thriller)
-- Your Name (Animação)
-- Cidade de Deus (Drama)
-
-**Atividades Padrão:**
-- Cozinhar juntos
-- Fazer um piquenique
-- Massagem relaxante
-- Dançar na sala
-- Jogar videogame
-- Caminhada no parque
-- Noite de spa caseiro
-- Pintar ou desenhar juntos
-
-## 🎨 Design e UX
-
-- **Gradientes Românticos**: Cores suaves e aconchegantes
-- **Animações Fluidas**: Transições suaves entre estados
-- **Interface Intuitiva**: Navegação simples e clara
-- **Responsivo**: Adapta-se a diferentes tamanhos de tela
-- **Acessibilidade**: Ícones claros e texto legível
-
-## 🔧 Personalização
-
-### Modificar Cores
-Edite os gradientes nos arquivos de tela:
-- Home: `['#667eea', '#764ba2']`
-- Filmes: `['#f093fb', '#f5576c']`
-- Atividades: `['#4facfe', '#00f2fe']`
-
-### Adicionar Novas Categorias
-No arquivo `storage.ts`, modifique as funções de inicialização para incluir seus próprios dados padrão.
-
-## 📱 Funcionalidades Futuras
-
-- [ ] Sincronização em nuvem
-- [ ] Estatísticas de uso
-- [ ] Temas personalizáveis
-- [ ] Sistema de pontuação
-- [ ] Lembretes de atividades
-- [ ] Histórico de sorteios
-- [ ] Compartilhamento social
-
-## 🤝 Contribuição
-
-Este é um projeto pessoal, mas sugestões e melhorias são sempre bem-vindas!
-
-## 📄 Licença
-
-Projeto desenvolvido para uso pessoal. Sinta-se livre para usar como base para seus próprios projetos!
+See [LICENSE](LICENSE) for more information.
 
 ---
 
-**Desenvolvido com ❤️ para casais que querem adicionar mais diversão ao relacionamento!**
+[Expo starter](expostarter.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40y0x53)](https://twitter.com/expostarter)

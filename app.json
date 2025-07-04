@@ -1,45 +1,4 @@
 {
-  "expo": {
-    "name": "App do Casal",
-    "slug": "couple-game-app",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "name": "App do Casal",
-      "shortName": "CoupleApp",
-      "lang": "pt-BR",
-      "backgroundColor": "#667eea",
-      "themeColor": "#667eea",
-      "description": "App para gamificar relacionamentos com sorteio de filmes e roleta de atividades",
-      "manifest": {
-        "name": "App do Casal",
-        "short_name": "CoupleApp",
-        "start_url": "/",
-        "display": "standalone",
-        "theme_color": "#667eea",
-        "background_color": "#667eea",
-        "orientation": "portrait"
-      }
-    },
-    "platforms": ["ios", "android", "web"]
-  }
+  "name": "new_project",
+  "slug": "new_project"
 }
