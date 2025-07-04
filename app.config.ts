@@ -34,6 +34,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     bundler: "metro",
     output: "static",
     favicon: "./assets/images/favicon.png",
+    basePath: "couple-game-app",
   },
   plugins: ["expo-router", "expo-sqlite", "expo-font", "expo-web-browser"],
   experiments: {
