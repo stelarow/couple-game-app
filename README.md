@@ -1,89 +1,170 @@
-# Escola Habilidade - Landing Page
+# 💕 App do Casal - Couple Game App
 
-Uma landing page moderna e elegante para a Escola Habilidade, focada em cursos de inteligência artificial para profissionais de arquitetura e design.
+Um aplicativo mobile desenvolvido com React Native/Expo para gamificar relacionamentos românticos! 
 
-## 🎨 Características
+## 🎯 Funcionalidades Principais
 
-### Design
-- **Paleta de cores**: Magenta-neon (#d400ff) com fundo preto profundo
-- **Tipografia**: Montserrat (400, 600, 700)
-- **Estética**: Tecnologia + elegância com contrastes fortes e espaço negativo
+### 🏠 Tela Inicial (Home)
+- **Fotos Personalizáveis**: Espaços para adicionar fotos do casal
+- **Informações do Relacionamento**: Nomes, tempo juntos e objetivos
+- **Interface Animada**: Coração pulsante e animações suaves
+- **Tema Romântico**: Design com gradientes e cores aconchegantes
 
-### Seções
-1. **Header fixo** - Barra translúcida com blur e bordas magenta
-2. **Hero** - Céu estrelado interativo com 50 estrelas piscantes
-3. **Problema** - 3 cards destacando desafios dos profissionais
-4. **Solução** - Apresentação do método da escola
-5. **Etapas** - 4 semanas do curso com gradientes coloridos
-6. **Depoimentos** - Histórias de sucesso em cards com blur
-7. **CTA Final** - Chamada para ação com gradiente horizontal
+### 🎬 Sorteio de Filmes
+- **Sistema de Sorteio**: Algoritmo para escolher filmes aleatoriamente
+- **Cadastro de Filmes**: Adicione título, gênero, duração e nota
+- **Lista Organizada**: Visualize todos os filmes cadastrados
+- **Animações Interativas**: Ícone rotativo durante o sorteio
+- **Gerenciamento**: Adicione e remova filmes facilmente
 
-### Animações
-- **Starfield**: 50 estrelas com piscadas assíncronas
-- **Orbs flutuantes**: 2 orbs magenta com movimento vertical e rotação
-- **Hover effects**: Escala +2% e glow magenta em botões
-- **Scroll animations**: Fade-in + translateY para elementos
-- **Header**: Desliza de cima e ganha blur ao rolar
+### 🎯 Roleta de Atividades
+- **Roleta Animada**: Roleta visual com segmentos coloridos
+- **Cadastro de Atividades**: Nome, categoria e nível de dificuldade
+- **Sistema de Categorias**: Organize atividades por tipo
+- **Níveis de Dificuldade**: Fácil, Médio e Difícil com cores distintas
+- **Física Realista**: Animação de rotação com easing natural
 
-## 🚀 Como usar
+## 🛠️ Tecnologias Utilizadas
 
-1. **Clone ou baixe** os arquivos
-2. **Abra** o `index.html` em um navegador moderno
-3. **Personalize** as informações de contato no HTML
-4. **Ajuste** cores e estilos no `styles.css` se necessário
+- **React Native** - Framework principal
+- **Expo** - Plataforma de desenvolvimento
+- **TypeScript** - Tipagem estática
+- **React Navigation** - Navegação entre telas
+- **React Native Reanimated** - Animações avançadas
+- **React Native SVG** - Gráficos vetoriais para a roleta
+- **AsyncStorage** - Persistência local de dados
+- **Expo Linear Gradient** - Gradientes visuais
+- **React Native Animatable** - Animações simples
+- **Expo Image Picker** - Seleção de fotos
+- **Expo Vector Icons** - Ícones do app
 
-## 📱 Responsividade
+## 📱 Estrutura do Projeto
 
-A página é totalmente responsiva e funciona em:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (até 767px)
+```
+CoupleGameApp/
+├── src/
+│   ├── components/
+│   │   └── AnimatedWheel.tsx    # Componente da roleta animada
+│   ├── screens/
+│   │   ├── HomeScreen.tsx       # Tela inicial com fotos
+│   │   ├── MoviePickerScreen.tsx # Tela de sorteio de filmes
+│   │   └── ActivityWheelScreen.tsx # Tela da roleta
+│   ├── types/
+│   │   └── index.ts             # Definições TypeScript
+│   ├── utils/
+│   │   └── storage.ts           # Funções de armazenamento
+│   └── data/
+├── App.tsx                      # Configuração principal e navegação
+└── package.json                 # Dependências do projeto
+```
 
-## 🎯 Foco do Conteúdo
+## 🚀 Como Executar
 
-- **Aula experimental gratuita** (sem compromisso)
-- **Formato 100% presencial** em São José-SC
-- **Resultados práticos**: renders, vídeos, páginas interativas
-- **Sem preços** - investimento informado na aula experimental
+### Pré-requisitos
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+- Expo CLI (`npm install -g @expo/cli`)
+- Dispositivo móvel com Expo Go ou emulador
+
+### Passos para execução
+
+1. **Clone o repositório**
+   ```bash
+   git clone <seu-repositorio>
+   cd CoupleGameApp
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+3. **Execute o projeto**
+   ```bash
+   npm start
+   # ou
+   expo start
+   ```
+
+4. **Abra no dispositivo**
+   - Use o Expo Go para escanear o QR code
+   - Ou execute em emulador com `npm run android` ou `npm run ios`
+
+## 🎮 Como Usar
+
+### Configuração Inicial
+1. **Configure o Casal**: Na tela inicial, toque no ícone de configurações para adicionar nomes
+2. **Adicione Fotos**: Toque nos espaços de foto para selecionar imagens da galeria
+3. **Dados Salvos**: Todas as informações são salvas automaticamente
+
+### Sorteio de Filmes
+1. **Adicione Filmes**: Toque no botão "+" para cadastrar filmes
+2. **Sorteie**: Toque em "Sortear Filme" para uma escolha aleatória
+3. **Gerencie**: Visualize e remova filmes da lista
+
+### Roleta de Atividades  
+1. **Cadastre Atividades**: Use o botão "+" para adicionar novas atividades
+2. **Gire a Roleta**: Toque em "Girar Roleta!" para começar a animação
+3. **Aguarde o Resultado**: A roleta girará e escolherá uma atividade
+
+## 📦 Dados Padrão
+
+O app vem com dados de exemplo pré-cadastrados:
+
+**Filmes Padrão:**
+- A Origem (Ficção Científica)
+- La La Land (Romance)
+- Parasita (Thriller)
+- Your Name (Animação)
+- Cidade de Deus (Drama)
+
+**Atividades Padrão:**
+- Cozinhar juntos
+- Fazer um piquenique
+- Massagem relaxante
+- Dançar na sala
+- Jogar videogame
+- Caminhada no parque
+- Noite de spa caseiro
+- Pintar ou desenhar juntos
+
+## 🎨 Design e UX
+
+- **Gradientes Românticos**: Cores suaves e aconchegantes
+- **Animações Fluidas**: Transições suaves entre estados
+- **Interface Intuitiva**: Navegação simples e clara
+- **Responsivo**: Adapta-se a diferentes tamanhos de tela
+- **Acessibilidade**: Ícones claros e texto legível
 
 ## 🔧 Personalização
 
-### Cores principais
-```css
---magenta-primary: #d400ff
---magenta-hover: #b300dd
---black-deep: #000000
---black-space: #110011
-```
+### Modificar Cores
+Edite os gradientes nos arquivos de tela:
+- Home: `['#667eea', '#764ba2']`
+- Filmes: `['#f093fb', '#f5576c']`
+- Atividades: `['#4facfe', '#00f2fe']`
 
-### Links de contato
-Edite no HTML:
-- WhatsApp: `https://wa.me/5548999999999`
-- Links de navegação
-- Informações de contato
+### Adicionar Novas Categorias
+No arquivo `storage.ts`, modifique as funções de inicialização para incluir seus próprios dados padrão.
 
-## 📄 Estrutura de arquivos
+## 📱 Funcionalidades Futuras
 
-```
-/
-├── index.html          # Estrutura HTML principal
-├── styles.css          # Estilos CSS completos
-├── script.js           # Animações e interações
-└── README.md           # Este arquivo
-```
+- [ ] Sincronização em nuvem
+- [ ] Estatísticas de uso
+- [ ] Temas personalizáveis
+- [ ] Sistema de pontuação
+- [ ] Lembretes de atividades
+- [ ] Histórico de sorteios
+- [ ] Compartilhamento social
 
-## 🌟 Destaques técnicos
+## 🤝 Contribuição
 
-- **Performance otimizada** com throttling em eventos de scroll
-- **Animações suaves** com CSS transitions e keyframes
-- **Intersection Observer** para animações de entrada
-- **Backdrop blur** para efeitos modernos
-- **Gradientes dinâmicos** em múltiplas seções
+Este é um projeto pessoal, mas sugestões e melhorias são sempre bem-vindas!
 
-## 📞 Contato
+## 📄 Licença
 
-Para personalizações ou dúvidas sobre a implementação, entre em contato através dos canais da Escola Habilidade.
+Projeto desenvolvido para uso pessoal. Sinta-se livre para usar como base para seus próprios projetos!
 
 ---
 
-*Desenvolvido com foco em conversão e experiência do usuário* 
+**Desenvolvido com ❤️ para casais que querem adicionar mais diversão ao relacionamento!**
