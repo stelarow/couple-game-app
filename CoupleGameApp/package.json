@@ -10,7 +10,7 @@
     "predeploy": "npx expo export --platform web",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://SEU-USUARIO.github.io/couple-game-app",
+  "homepage": "https://stelarow.github.io/couple-game-app",
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
     "@expo/vector-icons": "^14.1.0",
